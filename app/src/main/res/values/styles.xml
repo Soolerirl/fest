@@ -1,0 +1,101 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/input_color</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/lostpw</item>
+        <!--item name="android:spinnerItemStyle">@style/SpinnerItem</item-->
+        <item name="toolbarStyle">@style/Widget.AppCompat.Toolbar</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerItem.DropDownItem</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="hlv_listViewStyle">@style/HListView</item>
+        <item name="hlv_absHListViewStyle">@style/AbsHListView</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@color/white_overlay</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+        <!--item name="android:spinnerItemStyle">@style/SpinnerItem</item-->
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerItem.DropDownItem</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/white_overlay</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerItem.DropDownItem</item>
+    </style>
+
+    <style name="spinner_style" >
+        <!--item name="android:spinnerItemStyle">@style/SpinnerItem</item-->
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerItem.DropDownItem</item>
+        <item name="android:background">@drawable/spinner_bg</item>
+    </style>
+
+    <style name="spinner_style_settings" >
+        <!--item name="android:spinnerItemStyle">@style/SpinnerItem</item-->
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerItem.DropDownItem_settings</item>
+        <item name="android:background">@drawable/spinner_bg</item>
+    </style>
+
+    <!--style name="SpinnerItem" parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/input_color</item>
+    </style-->
+
+    <style name="SpinnerItem.DropDownItem" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/input_color</item>
+        <item name="android:popupBackground">@color/input_bg</item>
+    </style>
+
+    <style name="SpinnerItem.DropDownItem_settings" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/input_color</item>
+        <item name="android:popupBackground">@color/input_bg_settings</item>
+    </style>
+
+    <style name="ToolBarStyle" parent="">
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="starRatingBar" parent="@android:style/Widget.DeviceDefault.Light.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar_full</item>
+        <item name="android:minHeight">40dip</item>
+        <item name="android:maxHeight">40dip</item>
+    </style>
+
+    <style name="Widget.GifView" parent="@android:style/Widget"></style>
+
+
+    <style name="AbsHListView">
+        <item name="android:scrollbars">horizontal</item>
+        <item name="android:fadingEdge">horizontal</item>
+    </style>
+
+    <style name="HListView" parent="AbsHListView">
+        <item name="android:listSelector">@android:drawable/list_selector_background</item>
+        <item name="android:cacheColorHint">?android:attr/colorBackgroundCacheHint</item>
+        <item name="android:divider">@android:drawable/divider_horizontal_bright</item>
+        <item name="android:scrollingCache">false</item>
+        <item name="android:overScrollMode">always</item>
+        <item name="android:fastScrollEnabled">true</item>
+        <item name="android:smoothScrollbar">false</item>
+        <item name="android:choiceMode">multipleChoiceModal</item>
+        <item name="hlv_stackFromRight">false</item>
+        <item name="hlv_measureWithChild">0</item>
+        <item name="hlv_dividerWidth">3dip</item>
+        <item name="hlv_headerDividersEnabled">true</item>
+        <item name="hlv_footerDividersEnabled">true</item>
+        <item name="hlv_transcriptMode">disabled</item>
+    </style>
+
+</resources>

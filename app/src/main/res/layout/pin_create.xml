@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialogs"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:paddingTop="30dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="@string/pin_features"
+            android:paddingLeft="32dp"
+            android:textSize="20dp"
+            android:textColor="@color/input_color" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_cancel"
+            android:background="@drawable/cancel_btn"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_pin"
+        android:textSize="16sp"
+        android:textColor="@color/input_color"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <RadioButton
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_marginRight="2dp"
+                android:drawableLeft="@drawable/pin_create_tempt"
+                android:id="@+id/pin_tempt"
+                android:checked="true"
+                android:background="@drawable/pin_type_bg"
+                android:button="@android:color/transparent"/>
+
+            <RadioButton
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_marginRight="2dp"
+                android:paddingLeft="5dp"
+                android:drawableLeft="@drawable/pin_create_stage"
+                android:id="@+id/pin_stage"
+                android:background="@drawable/pin_type_bg"
+                android:button="@android:color/transparent"/>
+
+            <RadioButton
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_marginRight="2dp"
+                android:paddingLeft="5dp"
+                android:drawableLeft="@drawable/pin_create_toilet"
+                android:id="@+id/pin_toilet"
+                android:background="@drawable/pin_type_bg"
+                android:button="@android:color/transparent"/>
+
+            <RadioButton
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_marginRight="2dp"
+                android:paddingLeft="10dp"
+                android:drawableLeft="@drawable/pin_create_food"
+                android:id="@+id/pin_food"
+                android:background="@drawable/pin_type_bg"
+                android:button="@android:color/transparent"/>
+
+            <RadioButton
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:paddingLeft="5dp"
+                android:drawableLeft="@drawable/pin_create_meet"
+                android:id="@+id/pin_meet"
+                android:background="@drawable/pin_type_bg"
+                android:button="@android:color/transparent"/>
+
+        </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pin_name"
+        android:textSize="16sp"
+        android:textColor="@color/input_color"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pin_name"
+        android:background="@drawable/inputs_dialog"
+        android:padding="2dp"
+        android:hint="@string/pin_name_hint"
+        android:textColorHint="@color/input_color"
+        android:textSize="16sp"
+        android:textColor="@color/lostpw"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pin_description"
+        android:textSize="16sp"
+        android:textColor="@color/input_color"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/pin_description"
+        android:gravity="left"
+        android:background="@drawable/inputs_dialog"
+        android:padding="2dp"
+        android:hint="@string/pin_description_hint"
+        android:textColorHint="@color/input_color"
+        android:textSize="16sp"
+        android:textColor="@color/lostpw"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pin_add_friends"
+        android:textSize="16dp"
+        android:textColor="@color/input_color"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"/>
+
+    <eu.fest.view.ContactsCompletionView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pin_add_friends"
+        android:background="@drawable/inputs_dialog"
+        android:padding="2dp"
+        android:imeOptions="actionDone"
+        android:hint="@string/pin_add_friends_hint"
+        android:textColorHint="@color/input_color"
+        android:textSize="16sp"
+        android:textColor="@color/lostpw"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+
+    <Button
+        android:id="@+id/dialogButtonOK"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:textAllCaps="false"
+        android:text="@string/pin_drop"
+        android:background="@drawable/buttons"
+        android:textColor="@color/input_color"
+        android:gravity="center"
+        android:scaleY="0.7"
+        android:scaleX="0.7"/>
+
+</LinearLayout>

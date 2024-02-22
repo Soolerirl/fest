@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/input_bg_settings">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TimePicker
+            android:id="@+id/time_picker"
+            android:layout_width="match_parent"
+            android:timePickerMode="spinner"
+            android:amPmTextColor="@color/input_color"
+            android:numbersTextColor="@color/input_color"
+            android:numbersInnerTextColor="@color/input_color"
+            android:numbersBackgroundColor="@color/input_color"
+            android:numbersSelectorColor="@color/input_color"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/date_time_set"
+        android:layout_width="match_parent"
+        android:text="Set"
+        android:layout_height="wrap_content"
+        android:textColor="@color/input_color"
+        android:background="@color/input_bg"
+        android:gravity="center"
+        android:textSize="16sp"/>
+
+</LinearLayout>

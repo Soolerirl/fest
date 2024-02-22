@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/settingsbg"
+    android:gravity="center">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/notification_icon"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notification"
+            android:textColor="@color/input_color"
+            android:background="@android:color/transparent"
+            android:textSize="20sp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:background="@color/tw__light_gray"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/global"
+            android:id="@+id/globalSoundKey"
+            android:textSize="16sp"
+            android:textColor="@color/input_color"
+            android:layout_weight="0.6"/>
+
+        <Switch
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="wrap_content"
+            android:id="@+id/global_switch"
+            android:gravity="start"
+            android:layout_gravity="center"
+            android:checked="true"
+            android:thumb="@drawable/setting_switch_thumb"
+            android:track="@drawable/setting_switch"
+            android:textOff="@string/off"
+            android:textOn="@string/on"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:background="@color/tw__light_gray"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vibration"
+            android:id="@+id/notificationSoundKey"
+            android:textSize="16sp"
+            android:textColor="@color/input_color"
+            android:layout_weight="0.6"/>
+
+        <Switch
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="wrap_content"
+            android:id="@+id/vibration_switch"
+            android:gravity="start"
+            android:layout_gravity="center"
+            android:checked="true"
+            android:thumb="@drawable/setting_switch_thumb"
+            android:track="@drawable/setting_switch"
+            android:textOff="@string/off"
+            android:textOn="@string/on"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:background="@color/tw__light_gray"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/notification_sound"
+            android:id="@+id/requestKey"
+            android:textSize="16sp"
+            android:textColor="@color/input_color"
+            android:layout_weight="0.6"/>
+
+        <Switch
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="wrap_content"
+            android:id="@+id/notification_sound_switch"
+            android:gravity="start"
+            android:layout_gravity="center"
+            android:checked="true"
+            android:thumb="@drawable/setting_switch_thumb"
+            android:track="@drawable/setting_switch"
+            android:textOff="@string/off"
+            android:textOn="@string/on"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:background="@color/tw__light_gray"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/led_light"
+            android:id="@+id/festeventKey"
+            android:textSize="16sp"
+            android:textColor="@color/input_color"
+            android:layout_weight="0.6"/>
+
+        <Switch
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="wrap_content"
+            android:id="@+id/led_light_switch"
+            android:gravity="start"
+            android:layout_gravity="center"
+            android:checked="true"
+            android:thumb="@drawable/setting_switch_thumb"
+            android:track="@drawable/setting_switch"
+            android:textOff="@string/off"
+            android:textOn="@string/on"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:background="@color/tw__light_gray"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:background="@color/tw__light_gray"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/notif_time_text_"
+            android:textSize="12sp"
+            android:textColor="@color/input_color"
+            android:layout_weight="0.7"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:id="@+id/send_time"
+            android:text="01:00"
+            android:textSize="16sp"
+            android:textColor="@color/input_color"
+            android:gravity="right"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:background="@color/tw__light_gray"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:background="@color/tw__light_gray"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/notif_added_friend"
+            android:textSize="16sp"
+            android:textColor="@color/input_color"
+            android:layout_weight="0.6"/>
+
+        <Switch
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="wrap_content"
+            android:id="@+id/friend_request_switch"
+            android:gravity="start"
+            android:layout_gravity="center"
+            android:checked="true"
+            android:thumb="@drawable/setting_switch_thumb"
+            android:track="@drawable/setting_switch"
+            android:textOff="@string/off"
+            android:textOn="@string/on"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:background="@color/tw__light_gray"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/notif_confirmation"
+            android:textSize="16sp"
+            android:textColor="@color/input_color"
+            android:layout_weight="0.6"/>
+
+        <Switch
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="wrap_content"
+            android:id="@+id/confirmation_switch"
+            android:gravity="start"
+            android:layout_gravity="center"
+            android:checked="true"
+            android:thumb="@drawable/setting_switch_thumb"
+            android:track="@drawable/setting_switch"
+            android:textOff="@string/off"
+            android:textOn="@string/on"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:background="@color/tw__light_gray"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/notif_new_possible_friend"
+            android:textSize="16sp"
+            android:textColor="@color/input_color"
+            android:layout_weight="0.7"/>
+
+        <Switch
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="wrap_content"
+            android:id="@+id/potential_new_friend_switch"
+            android:gravity="start"
+            android:layout_gravity="center"
+            android:checked="true"
+            android:thumb="@drawable/setting_switch_thumb"
+            android:track="@drawable/setting_switch"
+            android:textOff="@string/off"
+            android:textOn="@string/on"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/input_color"
+        android:text="@string/notif_face_twitter_friend"
+        android:textSize="12sp"/>
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:background="@color/tw__light_gray"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/notif_friends_go_event"
+            android:textSize="12sp"
+            android:textColor="@color/input_color"
+            android:layout_weight="0.7"/>
+
+        <Switch
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="wrap_content"
+            android:id="@+id/friends_goon"
+            android:gravity="start"
+            android:layout_gravity="center"
+            android:checked="true"
+            android:thumb="@drawable/setting_switch_thumb"
+            android:track="@drawable/setting_switch"
+            android:textOff="@string/off"
+            android:textOn="@string/on"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:background="@color/tw__light_gray"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/notif_some_add_location"
+            android:textSize="12sp"
+            android:textColor="@color/input_color"
+            android:layout_weight="0.7"/>
+
+        <Switch
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_location"
+            android:gravity="start"
+            android:layout_gravity="center"
+            android:checked="true"
+            android:thumb="@drawable/setting_switch_thumb"
+            android:track="@drawable/setting_switch"
+            android:textOff="@string/off"
+            android:textOn="@string/on"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:background="@color/tw__light_gray"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/event_update"
+            android:textSize="16sp"
+            android:textColor="@color/input_color"
+            android:layout_weight="0.7"/>
+
+        <Switch
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="wrap_content"
+            android:id="@+id/event_update_switch"
+            android:gravity="start"
+            android:layout_gravity="center"
+            android:checked="true"
+            android:thumb="@drawable/setting_switch_thumb"
+            android:track="@drawable/setting_switch"
+            android:textOff="@string/off"
+            android:textOn="@string/on"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/input_color"
+        android:text="@string/notif_if_event_change"
+        android:textSize="12sp"/>
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:background="@color/tw__light_gray"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/notif_recommend_fest"
+                android:textSize="16sp"
+                android:textColor="@color/input_color"
+                android:layout_weight="0.7"/>
+
+            <Switch
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:layout_height="wrap_content"
+                android:id="@+id/festival_recommendation"
+                android:gravity="start"
+                android:layout_gravity="center"
+                android:checked="true"
+                android:thumb="@drawable/setting_switch_thumb"
+                android:track="@drawable/setting_switch"
+                android:textOff="@string/off"
+                android:textOn="@string/on"/>
+        </LinearLayout>
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:background="@color/tw__light_gray"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/notif_recommend_event"
+                android:textSize="16sp"
+                android:textColor="@color/input_color"
+                android:layout_weight="0.7"/>
+
+            <Switch
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:layout_height="wrap_content"
+                android:id="@+id/event_recommendation"
+                android:gravity="start"
+                android:layout_gravity="center"
+                android:checked="true"
+                android:thumb="@drawable/setting_switch_thumb"
+                android:track="@drawable/setting_switch"
+                android:textOff="@string/off"
+                android:textOn="@string/on"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:background="@color/tw__light_gray"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/notif_recommend_performance"
+                android:textSize="16sp"
+                android:textColor="@color/input_color"
+                android:layout_weight="0.7"/>
+
+            <Switch
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:layout_height="wrap_content"
+                android:id="@+id/performers_recommendation"
+                android:gravity="start"
+                android:layout_gravity="center"
+                android:checked="true"
+                android:thumb="@drawable/setting_switch_thumb"
+                android:track="@drawable/setting_switch"
+                android:textOff="@string/off"
+                android:textOn="@string/on"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:background="@color/tw__light_gray"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/notif_event_change"
+                android:textSize="16sp"
+                android:textColor="@color/input_color"
+                android:layout_weight="0.7"/>
+
+            <Switch
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:layout_height="wrap_content"
+                android:id="@+id/change_event"
+                android:gravity="start"
+                android:layout_gravity="center"
+                android:checked="true"
+                android:thumb="@drawable/setting_switch_thumb"
+                android:track="@drawable/setting_switch"
+                android:textOff="@string/off"
+                android:textOn="@string/on"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:background="@color/tw__light_gray"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/notif_performance_change"
+                android:textSize="16sp"
+                android:textColor="@color/input_color"
+                android:layout_weight="0.7"/>
+
+            <Switch
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:layout_height="wrap_content"
+                android:id="@+id/change_performers"
+                android:gravity="start"
+                android:layout_gravity="center"
+                android:checked="true"
+                android:thumb="@drawable/setting_switch_thumb"
+                android:track="@drawable/setting_switch"
+                android:textOff="@string/off"
+                android:textOn="@string/on"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:background="@color/tw__light_gray"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/crash_report"
+            android:textSize="13sp"
+            android:textColor="@color/input_color"
+            android:layout_weight="0.6"/>
+
+        <Switch
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="wrap_content"
+            android:id="@+id/crash_request_switch"
+            android:gravity="start"
+            android:layout_gravity="center"
+            android:checked="true"
+            android:thumb="@drawable/setting_switch_thumb"
+            android:track="@drawable/setting_switch"
+            android:textOff="@string/off"
+            android:textOn="@string/on"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:background="@color/tw__light_gray"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

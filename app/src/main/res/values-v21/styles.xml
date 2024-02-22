@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--style name="AppTheme" parent="android:Theme.Material.NoActionBar"-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+            <!-- Customize your theme here. -->
+            <item name="colorPrimary">@color/colorPrimary</item>
+            <!--item name="colorPrimaryDark">@android:color/transparent</item-->
+            <item name="android:statusBarColor">@android:color/transparent</item>
+            <item name="android:textColorPrimary">@color/input_color</item>
+            <item name="android:navigationBarColor">@android:color/transparent</item>
+            <item name="android:windowTranslucentStatus">true</item>
+            <item name="android:windowTranslucentNavigation">true</item>
+            <item name="android:windowActivityTransitions">true</item>
+
+            <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+
+            <item name="toolbarStyle">@style/Widget.AppCompat.Toolbar</item>
+
+            <!-- specify enter and exit transitions -->
+            <item name="android:windowEnterTransition">@transition/explode</item>
+            <item name="android:windowExitTransition">@transition/explode</item>
+
+            <!-- specify shared element transitions -->
+            <item name="android:windowSharedElementEnterTransition">
+                @transition/change_image_transform</item>
+            <item name="android:windowSharedElementExitTransition">
+                @transition/change_image_transform</item>
+
+            <item name="colorAccent">@color/colorAccent</item>
+            <!--item name="android:spinnerItemStyle">@style/SpinnerItem</item-->
+            <item name="android:spinnerDropDownItemStyle">@style/SpinnerItem.DropDownItem</item>
+
+            <item name="hlv_listViewStyle">@style/HListView</item>
+            <item name="hlv_absHListViewStyle">@style/AbsHListView</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="android:Widget.Material.ActionBar">
+            <item name="android:background">@color/white_overlay</item>
+            <!--item name="android:spinnerItemStyle">@style/SpinnerItem</item-->
+            <item name="android:spinnerDropDownItemStyle">@style/SpinnerItem.DropDownItem</item>
+    </style>
+
+    <style name="spinner_style" >
+        <!--item name="android:spinnerItemStyle">@style/SpinnerItem</item-->
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerItem.DropDownItem</item>
+        <item name="android:background">@drawable/spinner_bg</item>
+    </style>
+
+    <style name="SpinnerItem.DropDownItem" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/input_color</item>
+        <item name="android:popupBackground">@color/input_bg</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="ToolBarStyle" parent="">
+        <item name="android:elevation">@dimen/toolbar_elevation</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <style name="AbsHListView">
+        <item name="android:scrollbars">horizontal</item>
+        <item name="android:fadingEdge">horizontal</item>
+    </style>
+
+    <style name="HListView" parent="AbsHListView">
+        <item name="android:listSelector">@android:drawable/list_selector_background</item>
+        <item name="android:cacheColorHint">?android:attr/colorBackgroundCacheHint</item>
+        <item name="android:divider">@android:drawable/divider_horizontal_bright</item>
+        <item name="android:scrollingCache">false</item>
+        <item name="android:overScrollMode">always</item>
+        <item name="android:fastScrollEnabled">true</item>
+        <item name="android:smoothScrollbar">false</item>
+        <item name="android:choiceMode">multipleChoiceModal</item>
+        <item name="hlv_stackFromRight">false</item>
+        <item name="hlv_measureWithChild">0</item>
+        <item name="hlv_dividerWidth">3dip</item>
+        <item name="hlv_headerDividersEnabled">true</item>
+        <item name="hlv_footerDividersEnabled">true</item>
+        <item name="hlv_transcriptMode">disabled</item>
+    </style>
+
+</resources>

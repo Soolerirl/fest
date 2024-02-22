@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="white_overlay">#ffffffff</color>
+    <color name="input_color">#ffffffff</color>
+    <color name="lostpw">#ff6000</color>
+    <color name="text_bg">#bbff6000</color>
+    <color name="input_bg">#bbee7b5d</color>
+    <color name="bar_bg">#66ee7b5d</color>
+    <color name="header">#66fd7e23</color>
+    <color name="input_bg_settings">#bb3e2d41</color>
+    <color name="leftmenu_bg">#663e2d41</color>
+    <color name="event_current">#8bd100</color>
+
+</resources>

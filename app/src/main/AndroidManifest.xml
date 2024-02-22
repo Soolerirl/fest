@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="eu.fest">
+
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <uses-permission android:name = "android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name = "android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name = "android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name = "android.permission.BLUETOOTH"/>
+    <uses-permission android:name = "android.permission.INTERNET"/>
+    <uses-permission android:name = "android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name = "android.permission.NETWORK"/>
+    <uses-permission android:name = "android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name = "android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name = "android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name = "com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name = "android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name = "android.permission.READ_LOGS"/>
+    <uses-permission android:name = "android.permission.WAKE_LOCK" />
+    <uses-permission android:name = "android.permission.GET_TASKS" />
+    <uses-permission android:name = "android.permission.VIBRATE" />
+    <uses-permission android:name = "android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
+
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="@string/gmaps_api_key" />
+
+    <permission
+        android:name="eu.fest.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="eu.fest.permission.MAPS_RECEIVE"/>
+
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+
+    <uses-permission android:name = "com.google.android.c2dm.permission.RECEIVE"/>
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <permission
+        android:name="eu.fest.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:screenOrientation="portrait"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name=".ServiceBusApplication_">
+        <activity
+            android:name=".StartActivity_"
+            android:configChanges="keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="@string/gmaps_api_key" />
+
+        <receiver
+            android:name=".net.gcm.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="eu.fest" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".net.gcm.GcmIntentService" />
+
+        <activity
+            android:name=".MainActivity_"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+
+        <activity
+            android:name=".MapActivity_"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+
+        <activity
+            android:name=".FriendSearchActivity_"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+
+        <activity
+            android:name=".SyncActivity_"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+
+        <activity
+            android:name=".SettingsActivity_"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+
+        <activity
+            android:name=".UserDataChangeActivity_"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+
+        <activity
+            android:name=".NotificationSetActivity_"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+
+        <activity
+            android:name=".FestivalListActivity_"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:allowTaskReparenting="true"
+            android:theme="@style/FullscreenTheme">
+
+        </activity>
+
+        <activity
+            android:name=".UserProfileActivity_"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+
+        <activity
+            android:name=".UserFriendsActivity_"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+
+        <activity
+            android:name=".FestivalPreviewActivity_"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+
+        <activity
+            android:name=".EventPreviewActivity_"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+
+        <activity
+            android:name=".PerformersListActivity_"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+
+        <activity
+            android:name=".PerformersPreviewActivity_"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+
+        <activity
+            android:name=".LoginActivity_"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+
+        <activity
+            android:name=".RegistrationActivity_"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+
+        <activity
+            android:name=".LostPasswordActivity_"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+
+        <activity
+            android:name=".PasswordChangeActivity_"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+
+        <activity
+            android:name=".ChangeEmailActivity_"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+
+        <activity
+            android:name=".WebViewActivity_"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity android:name="com.facebook.LoginActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="2b20da820e4908aeac2ccdce55f3c9eb660f557f" />
+
+        <receiver
+            android:name=".service.AlarmReceiver"
+            android:process=":remote" />
+
+    </application>
+
+</manifest>
